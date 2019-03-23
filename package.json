@@ -1,0 +1,27 @@
+{
+  "name": "rtbprojects-website-nuxt",
+  "version": "1.0.0",
+  "description": "My cool Nuxt.js project",
+  "author": "Robin",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build:nuxt": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "build": "npm run clean;npm run build:nuxt;npm run copy # for Firebase",
+    "clean": "rm -rf {dist,.nuxt}",
+    "copy": "mkdir dist;cp -R functions dist/server;cp -R src/static/ dist/client;cp -R .nuxt dist/server;cp -R dist/server/.nuxt/dist dist/client/assets"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "firebase": "^5.9.0",
+    "firebase-admin": "^7.1.1",
+    "nuxt": "^2.4.0",
+    "vuex": "^3.1.0",
+    "vuexfire": "^2.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}

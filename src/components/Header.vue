@@ -1,10 +1,47 @@
 <template>
-  <header class="background-primary" style="text-align:center">
-    <nav class="header">Menu</nav>
-    <img src="/media/profile-picture.jpeg" alt="profile picture" />
-    <h1>RTB<span>projects</span></h1>
-    <p>10 years of experience with Cloud, Frontend and Backend web technology</p>
-    <p><button onclick="this.style.display='none';document.getElementById('contact').style.display='block'">Contact</button><span id="contact"><a href="mailto:robin@rtbprojects.com">robin@rtbprojects.com</a></span></p>
+
+  <header class="background-primary uk-light" style="text-align:center">
+
+    <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 150">
+      <nav class="uk-navbar-container background-primary" uk-navbar>
+          <div class="uk-navbar-left">
+            <img src="/media/profile-picture.jpeg" alt="profile picture" />
+            <a class="uk-navbar-item uk-logo" href="#">RTB Projects</a>
+          </div>
+          <div class="uk-navbar-right uk-visible@m">
+              <ul class="uk-navbar-nav">
+                  <li><a href="#certificates" uk-scroll>Certificates</a></li>
+                  <li><a href="#projects" uk-scroll>Projects</a></li>
+                  <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li>
+                  <li><a href="#contact" uk-scroll>Contact</a></li>
+              </ul>
+          </div>
+          <div id="offcanvas-nav-primary" uk-offcanvas="overlay: true; flip: true">
+              <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+                <button class="uk-offcanvas-close" type="button" uk-close></button>
+                  <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+                    <li><a href="#certificates" uk-scroll>Certificates</a></li>
+                    <li><a href="#projects" uk-scroll>Projects</a></li>
+                    <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li>
+                    <li><a href="#contact" uk-scroll>Contact</a></li>
+                  </ul>
+              </div>
+          </div>
+
+          <div class="uk-navbar-right uk-hidden@m">
+              <a class="uk-navbar-toggle" href="#offcanvas-nav-primary" uk-toggle>
+                  <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+              </a>
+          </div>
+
+      </nav>
+    </div>
+
+    <div class="uk-container uk-margin-top">
+      <h2 class="uk-heading-divider">Hire an experienced Full Stack Web Developer</h2>
+      <h5 class="uk-margin-bottom">10+ years working with Frontend, Backend and Cloud technology</h5>
+    </div>
+
   </header>
 </template>
 
@@ -15,46 +52,35 @@ export default {
 
 <style scoped>
 
-header {
-  padding: 2rem;
-  color: white;
+h5 {
+  margin-top: 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
+/* override for non transparent background of the navbar */
+.uk-navbar-container:not(.uk-navbar-transparent) {
+  background-color: #192130;
+}
+/* hide the image when navbar is sticky */
+.uk-navbar-sticky img {
+    display: none;
+}
+
+.uk-navbar-right {
+  margin-right: 25px;
+}
+
+.uk-navbar-left {
+  margin-left: 25px;
 }
 
 img {
-  display: inline;
+  display: inline-block;
   border-radius: 50%;
-  height: 150px;
+  height: 50px;
   margin-block-end: -0.67em;
-}
-
-h1 {
-  display: inline;
-  font-size: 3rem;
-  font-weight: 300;
-  color: white;
-}
-
-a {
-  color: white;
-  text-decoration: underline;
-}
-
-#contact {
-  display: none;
-  margin-top: 2rem;
-  position: relative;
-}
-
-span {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-button {
-   padding: 1rem;
-   background-color: #2d3a4b;
-   border-radius: 5px;
-   color: white;
-   font-size: 1.5rem;
 }
 
 </style>

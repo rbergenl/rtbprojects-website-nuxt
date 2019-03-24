@@ -3,17 +3,17 @@ export const state = () => {
     user: null,
     usps: {
       one: {
-        text: '10 years web development, 5 years mobile web and NodeJs ecosystem.',
+        text: '<li>10 years web development</li><li>5 years mobile web</li><li>NodeJs ecosystem.</li><li>CI/CD</li>',
         title: 'Web Developer',
         icon: 'world'
       },
       two: {
-        text: 'Complex corporate environments, Agile/Scrum practices, CI/CD, DevOps and Offshore teams.',
+        text: '<li>Complex corporate environments</li><li>Agile/Scrum practices</li><li>DevOps</<li><li>Offshore teams</li>',
         title: 'Team Player',
         icon: 'comment'
       },
       three: {
-        text: 'Latest technology like Angular 7, Bootstrap 4, Progressive Web Apps and serverless architecture.',
+        text: '<li>Angular 7</li><li>Bootstrap 4</li><li>Progressive Web Apps</li><li>Serverless Architecture</li>',
         title: 'Passionate Learner',
         icon: 'mail'
       }

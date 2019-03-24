@@ -1,9 +1,14 @@
 <template>
-  <h1>Project</h1>
+  <Project />
 </template>
 
 <script>
+import Project from '~/components/Project';
+
 export default {
-  layout: 'project'
+  layout: 'project',
+  components: {
+    Project
+  }
 }
 </script>

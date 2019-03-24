@@ -1,5 +1,5 @@
 <template>
-  <section class="projects uk-section background-primary uk-light">
+  <section id="projects" class="uk-section background-primary to-right uk-light">
     <div class="uk-container uk-text-center">
       <h2 class="uk-heading-divider">Projects</h2>
       <div uk-grid class="uk-child-width-expand@s uk-text-center">

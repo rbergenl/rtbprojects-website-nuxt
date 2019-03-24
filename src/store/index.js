@@ -3,31 +3,41 @@ export const state = () => {
     user: null,
     usps: {
       one: {
-        text: '10 years experience with web development, 5 years with mobile web and the NodeJs ecosystem.'
+        text: '10 years web development, 5 years mobile web and NodeJs ecosystem.',
+        title: 'Web Developer',
+        icon: 'world'
       },
       two: {
-        text: 'Experience with complex corporate environments, Agile/Scrum practices, CI/CD, DevOps and offshore teams.'
+        text: 'Complex corporate environments, Agile/Scrum practices, CI/CD, DevOps and Offshore teams.',
+        title: 'Team Player',
+        icon: 'comment'
       },
       three: {
-        text: 'Up to date with Angular 7, Bootstrap 4, Progressive Web Apps and serverless architecture.'
+        text: 'Latest technology like Angular 7, Bootstrap 4, Progressive Web Apps and serverless architecture.',
+        title: 'Passionate Learner',
+        icon: 'mail'
       }
     },
     certificates: {
       aws: {
         title: 'AWS Developer Associate',
-        img_url: ''
+        img_url: '/media/certificates/aws-developer-associate.png'
       },
       mbs: {
         title: 'Mobile Web Specialist',
-        img_url: ''
+        img_url: '/media/certificates/mobile_web_specialist.png'
       },
       scrum: {
         title: 'Professional Scrum Developer',
-        img_url: ''
+        img_url: '/media/certificates/professional-scrum-developer.png'
       },
       java: {
         title: 'Java SE8 Associate',
-        img_url: ''
+        img_url: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/1200px-Java_programming_language_logo.svg.png'
+      },
+      prince2: {
+        title: 'Prince 2',
+        img_url: 'https://ituonline.com/wp-content/uploads/2018/02/prince2-small.png'
       }
     },
     skillmatrix: {
@@ -161,8 +171,12 @@ export const getters = {
   },
   certificates (state) {
     return state.certificates
+  },
+  usps (state) {
+    return state.usps
   }
 }
+
 
 // import firebase from '~/plugins/firebase';
 // import { firebaseAction } from 'vuexfire'

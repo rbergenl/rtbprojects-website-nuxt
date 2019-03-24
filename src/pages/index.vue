@@ -1,23 +1,22 @@
 <template>
-  <Home />
+  <main class="home">
+    <Usps />
+    <Certificates />
+    <Projects />
+  </main>
 </template>
 
 <script>
-import Home from '../components/Home';
-//import { mapGetters } from 'vuex';
+import Usps from '../components/Usps';
+import Certificates from '../components/Certificates';
+import Projects from '../components/Projects';
 
 export default {
   components: {
-    Home
-  },
-  // async mounted() {
-  //    await Promise.all([
-  //      this.$store.dispatch('INIT_CERTIFICATES')
-  //    ])
-  // },
-  // computed: {
-  //   ...mapGetters(['certificates'])
-  // }
+    Usps,
+    Certificates,
+    Projects
+  }
 }
 </script>
 

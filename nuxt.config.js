@@ -15,7 +15,12 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/png', href: 'icons/favicon.png' },
-      { rel: 'preconnect dns-prefetch', type:'font', href: 'https://fonts.googleapis.com/css?family=Dosis', crossorigin: true }
+      { rel: 'stylesheet', type:'text/css', href: 'https://fonts.googleapis.com/css?family=Dosis', crossorigin: true },
+      { rel: 'stylesheet', type:'text/css', href:'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css' }
+    ],
+    script: [
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js' },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js' }
     ]
   },
 
@@ -28,12 +33,14 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/css/main.css'
   ],
 
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+  //  { src: '~/plugins/ng', ssr: false }
   ],
 
   /*

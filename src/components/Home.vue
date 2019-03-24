@@ -1,19 +1,5 @@
 <template>
   <div>
-    <!--The content below is only a placeholder and can be replaced.-->
-    <header class="logo" style="text-align:center">
-      <img src="../assets/profile-picture.jpeg" alt="profile picture" />
-      <h1>RTB<span>projects</span></h1>
-      <p>10 years of experience with Cloud, Frontend and Backend web technology</p>
-      <p><button onclick="this.style.display='none';document.getElementById('contact').style.display='block'">Contact</button><span id="contact"><a href="mailto:robin@rtbprojects.com">robin@rtbprojects.com</a></span></p>
-    </header>
-
-    <div>
-      <ul>
-        <li v-for="cert in certificates">{{cert.title}}</li>
-      </ul>
-    </div>
-
     <main style="text-align:center">
 
       <div style="display: flex; width: 400px; margin: auto auto; margin-top: 2rem; justify-content: space-between;">
@@ -77,53 +63,6 @@ export default {
 </script>
 
 <style scoped>
-
-.logo {
-  background-image: linear-gradient(to left, #2d3a4b, #192130);
-  padding: 2rem;
-  color: white;
-}
-
-.logo > img {
-  display: inline;
-  border-radius: 50%;
-  height: 150px;
-  margin-block-end: -0.67em;
-}
-
-h1 {
-  display: inline;
-}
-
-a {
-  color: white;
-  text-decoration: underline;
-}
-
-#contact {
-  display: none;
-  margin-top: 2rem;
-  position: relative;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: 300;
-  color: white;
-}
-
-span {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-button {
-   padding: 1rem;
-   background-color: #2d3a4b;
-   border-radius: 5px;
-   color: white;
-   font-size: 1.5rem;
-}
-
 .badge {
   flex: 0 1 30%;
   display: flex;
@@ -136,5 +75,4 @@ button {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
-
 </style>

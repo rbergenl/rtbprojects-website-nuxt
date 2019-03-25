@@ -23,16 +23,13 @@ export default {
   },
   mounted: () => {
     if (process.client) {
+      // add checkmark icons to the list items
       const iconElm = document.createElement('span');
       iconElm.setAttribute('uk-icon', 'icon: check; ratio: 1');
       iconElm.classList.add('uk-margin-small-right');
       const listItems = document.querySelectorAll('#usps li');
       for (let listItem of listItems) {
         listItem.insertBefore(iconElm.cloneNode(true), listItem.childNodes[0]);
-        // UIkit.icon(iconElm, {
-        //   icon: 'check'
-        // });
-        // UIkit.icon(listItems).svg.then(function(svg) { console.log(svg) })
       }
     }
   }

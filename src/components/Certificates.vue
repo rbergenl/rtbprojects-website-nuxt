@@ -1,6 +1,7 @@
 <template>
   <section id="certificates" class="uk-section">
     <div class="uk-container">
+      <h2 class="uk-heading-divider uk-text-center">Certificates</h2>
       <div uk-slider="autoplay: true; autoplay-interval: 3000">
         <div class="uk-position-relative" tabindex="-1">
             <div class="uk-slider-container">

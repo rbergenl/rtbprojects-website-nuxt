@@ -68,6 +68,22 @@ export const state = () => {
         img_url: '',
         description: 'For the Retail department create the first responsive widgets for internet banking. For the Commercial Banking department created new responsive mobile friendly webpages.'
       },
+      small_projects: {
+        title: 'Projects that took less than one year. IT consultancy and web development for small business owners.',
+        type: 'big',
+        year: 2009,
+        company: '',
+        img_url: '',
+        description: '<ul><li>GoldenGirlWorld: built a webshop with Wordpress and Woocommerce. Added payments integration to Paypal, Stripe. And order fullfilment integration to Printful.</li><li>DunWallets</li><li>KijkMedia</li><li>Vandamvoedingsadvies</li><li>Brasserie Jong en Oud</li><li>Oranjewoud N.V.</li></ul>'
+      },
+      own_projects: {
+        title: 'Projects with a group as startup or ventures by myself',
+        type: 'big',
+        year: 2008,
+        company: '',
+        img_url: '',
+        description: '<ul><li>Planty</li><li>CryptoBot</li><li>Vivanty</li><li>EastHorizon</li><li>FinestPashmina</li><li>RealHookah</li><li>GlimpseMaps</li><li>HithchikeToAsia</li></ul>'
+      },
       goldengirlworld: {
         type: 'small',
         year: 2019,
@@ -115,7 +131,7 @@ export const state = () => {
         year: 2012,
         company: '',
         img_url: '',
-        description: ''
+        description: 'As Projectleader responsible for two projects. One Prince2 project to deliver an IT Selfservice Portal. And a Scrum project to deliver a workflow application for an internal customer. The activities included making project plans, supporting the teams and communicating with stakeholders. As Information Analist delivered thirteen reports with process- or system descriptions and advice.'
       },
       easthorizon: {
         type: 'small',
@@ -131,22 +147,32 @@ export const state = () => {
         img_url: '',
         description: 'Built a complete e-commerce solution to sell pashina shawls via internet. Woocommerce did not exist yet, so built the backend with PHP to manage content, inventory and orders. Also had custom integrations with payment gateways. And worked together with an Offshore supplier to perform Search Engine Optimization.'
       },
-      realhookah: {
+      oranjewoud: {
         type: 'small',
+        year: 2010,
+        company: '',
+        img_url: '',
+        description: ''
+      },
+      realhookah: {
+        title: 'RealHookah',
+        type: 'own',
         year: 2010,
         img_url: '',
         company: 'A webshop to sell authentic hookahs from Istanbul. The endgoal is to have all order fullfilment and customer service outsourced.',
         description: 'Developed business plans. Outsourced the design and development of the web application to a company in India.'
       },
       glimpsemaps: {
-        type: 'small',
+        title: 'GlimpseMaps',
+        type: 'own',
         year: 2009,
         img_url: '',
         company: 'A website that lays an interactive tourist map on top of Google Maps. My first venture inspired by The Four Hour Workweek.',
         description: 'Developed business plans. Outsourced the design of the web application to a freelancer in The Netherlands. And outsourced the development of the web application to a company in India.'
       },
       hitchhiketoasia: {
-        type: 'small',
+        title: 'Hitchhike to Asia',
+        type: 'own',
         year: 2008,
         img_url: '',
         company: 'Three friends, Robin, Sjoerd and Ivo, went on an adventurious trip. Hitchhiking and couchsurfing to Asia. The endgoal is to reach Nepal and do volunteering work.',
@@ -174,6 +200,39 @@ export const getters = {
   },
   usps (state) {
     return state.usps
+  },
+  projects (state) {
+    return state.projects
+  },
+  getProject(state) {
+    return (key) => state.projects[key]
+  },
+  ownProjects (state) {
+    const projects = state.projects;
+    let arr = new Array();
+    for (let key in projects) {
+      projects[key].key = key;
+      if (projects[key].type === 'own') arr.push(projects[key]);
+    }
+    return arr;
+  },
+  bigProjects (state) {
+    const projects = state.projects;
+    let arr = new Array();
+    for (let key in projects) {
+      projects[key].key = key;
+      if (projects[key].type === 'big') arr.push(projects[key]);
+    }
+    return arr;
+  },
+  smallProjects (state) {
+    const projects = state.projects;
+    let arr = new Array();
+    for (let key in projects) {
+      projects[key].key = key;
+      if (projects[key].type === 'small') arr.push(projects[key]);
+    }
+    return arr;
   }
 }
 

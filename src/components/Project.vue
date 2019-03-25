@@ -1,8 +1,15 @@
 <template>
+  <section id="project" class="uk-section">
   <div class="uk-container">
-    <h2 v-if="project.title">{{project.title}}</h2>
-    <div v-html="project.description"></div>
+    <h2 v-if="project.company">{{project.company}}</h2>
+    <ul class="uk-list checkmarks" v-html="project.checkmarks"></ul>
+    <blockquote cite="#" v-if="project.paragraphs" v-for="paragraph in project.paragraphs">
+        <p class="uk-margin-small-bottom">{{paragraph.text}}</p>
+        <footer>{{paragraph.footer}}</footer>
+    </blockquote>
   </div>
+  <div class="uk-container uk-container-center uk-text-center uk-margin-top">[end]</div>
+</section>
 </template>
 
 <script>
@@ -13,6 +20,24 @@ export default {
      project() {
        return this.$store.state.projects[this.$route.params.id]
      }
+  },
+  mounted: () => {
+    if (process.client) {
+      // add checkmark icons to the list items
+      const iconElm = document.createElement('span');
+      iconElm.setAttribute('uk-icon', 'icon: check; ratio: 1');
+      iconElm.classList.add('uk-margin-small-right');
+      const listItems = document.querySelectorAll('#project .checkmarks > li');
+      for (let listItem of listItems) {
+        listItem.insertBefore(iconElm.cloneNode(true), listItem.childNodes[0]);
+      }
+    }
   }
 }
 </script>
+
+<style scoped>
+p {
+  font-style: normal
+}
+</style>

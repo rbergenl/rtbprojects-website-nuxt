@@ -62,27 +62,102 @@ export const state = () => {
     },
     projects: {
       abnamro: {
+        title: 'Built mobile friendly website Commercial Banking and responsive widgets for Internet Banking.',
         type: 'big',
         year: 2014,
-        company: '',
-        img_url: '',
-        description: 'For the Retail department create the first responsive widgets for internet banking. For the Commercial Banking department created new responsive mobile friendly webpages.'
+        company: 'ABN AMRO',
+        img_url: '/media/projects/abnamro_project_logo.png',
+        description: 'For the Retail department created the first responsive widgets for internet banking. For the Commercial Banking department created new responsive mobile friendly webpages.',
+        checkmarks: '<li>NodeJs</li><li>Angular 7</li><li>Bootstrap 4</li>'
       },
-      small_projects: {
-        title: 'Projects that took less than one year. IT consultancy and web development for small business owners.',
+      other_projects: {
+        title: 'IT consultancy and web development for small business owners. And projects that took less than one year.',
         type: 'big',
         year: 2009,
-        company: '',
-        img_url: '',
-        description: '<ul><li>GoldenGirlWorld: built a webshop with Wordpress and Woocommerce. Added payments integration to Paypal, Stripe. And order fullfilment integration to Printful.</li><li>DunWallets</li><li>KijkMedia</li><li>Vandamvoedingsadvies</li><li>Brasserie Jong en Oud</li><li>Oranjewoud N.V.</li></ul>'
+        company: 'Shortterm projects for others',
+        img_url: '/media/projects/small_other_projects_logos.png',
+        paragraphs: {
+          one: {
+            text: 'GoldenGirlWorld created and sells tshirts with illustrations of a girl. RTB Projects setup a webshop with Wordpress and Woocommerce. This also meant adding payments integration to Paypal and Stripe (iDeal), and integration to Printful for order fullfilment. Also implemented Digital Marketing tools like Google Analytics and Search Engine Optimisation.',
+            footer: 'GoldenGirlWorld'
+          },
+          two: {
+            text: 'DunWallets created and sells a wallet with minimalist design. RTB Projects setup a multilingual webshop with Wordpress and Woocommerce. This also meant adding payments integration to Paypal and Sisow (iDeal). Created numerous of customizations towards styling and layout.',
+            footer: 'DunWallets'
+          },
+          three: {
+            text: 'KijkMedia is a specialist in visual storytelling. RTB Projects setup a Wordpress website with customizations and an integration to Social Media.',
+            footer: 'KijkMedia'
+          },
+          four: {
+            text: 'Vandam Voedings- en Dieetadvies is a specialist in health consultancy. RTB Projects setup a Wordpress website and provided consultancy regarding Google Suite.',
+            footer: 'Vandam Voedings- en Dieetadvies'
+          },
+          five: {
+            text: 'Brasserie Jong & Oud is a vibrant eating and drinking place in Zwolle. RTB Projects setup a Wordpress website and provided consultantcy regarding Google Suite.',
+            footer: 'Brasserie Jong & Oud'
+          },
+          six: {
+            text: 'Oranjewoud N.V. provides a wide range of services with regards to infrastructural developments. For the Group IT department RTB Projects delivered multiple ITIL artifacts: Service Level Requirements, Process Manuals and a Maturity Assessment.',
+            footer: 'Oranjewoud N.V.'
+          }
+        },
+        checkmarks: '<li>Wordpress and Woocommerce</li><li>ITIL</li><li>Google Marketing</li>'
       },
       own_projects: {
         title: 'Projects with a group as startup or ventures by myself',
         type: 'big',
         year: 2008,
-        company: '',
-        img_url: '',
-        description: '<ul><li>Planty</li><li>CryptoBot</li><li>Vivanty</li><li>EastHorizon</li><li>FinestPashmina</li><li>RealHookah</li><li>GlimpseMaps</li><li>HithchikeToAsia</li></ul>'
+        company: 'Startups and own ventures',
+        img_url: '/media/projects/small_own_projects_logos.png',
+        paragraphs: {
+          one: {
+            text: '',
+            footer: 'Planty'
+          },
+          two: {
+            text: '',
+            footer: 'CryptoBot'
+          },
+          three: {
+            text: '',
+            footer: 'Vivanty'
+          },
+          four: {
+            text: '',
+            footer: 'BelastingRetour'
+          },
+          five: {
+            text: '',
+            footer: 'DutchAdventure'
+          },
+          six: {
+            text: '',
+            footer: 'FinestPashmina'
+          },
+          seven: {
+            text: '',
+            footer: 'RealHookah'
+          },
+          eight: {
+            text: '',
+            footer: 'GlimpseMaps'
+          },
+          nine: {
+            text: '',
+            footer: 'HitchhikeToAsia'
+          }
+        },
+        checkmarks: '<li>Amazon Web Services</li><li>PHP</li>'
+      },
+      wageningen_university_and_research: {
+        title: 'As Project Manager delivered a Prince2 and a Scrum project. As Information Analyst delivered many system descriptions and advisory reports.',
+        type: 'big',
+        year: 2012,
+        company: 'Wageningen University & Research centre',
+        img_url: '/media/projects/wageningen_university_and_research_project_logo.png',
+        description: 'As Projectleader responsible for two projects. One Prince2 project to deliver an IT Selfservice Portal. And a Scrum project to deliver a workflow application for an internal customer. The activities included making project plans, supporting the teams and communicating with stakeholders. As Information Analist delivered thirteen reports with process- or system descriptions and advice.',
+        checkmarks: '<li>Scrum</li><li>Prince2</li><li>Communication trainings</li>'
       },
       goldengirlworld: {
         type: 'small',
@@ -125,13 +200,6 @@ export const state = () => {
         company: '',
         img_url: '',
         description: 'Setup Google Suite and analytics'
-      },
-      wageningen_university_and_research: {
-        type: 'big',
-        year: 2012,
-        company: '',
-        img_url: '',
-        description: 'As Projectleader responsible for two projects. One Prince2 project to deliver an IT Selfservice Portal. And a Scrum project to deliver a workflow application for an internal customer. The activities included making project plans, supporting the teams and communicating with stakeholders. As Information Analist delivered thirteen reports with process- or system descriptions and advice.'
       },
       easthorizon: {
         type: 'small',

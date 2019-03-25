@@ -3,10 +3,17 @@
     <div class="uk-container uk-text-center">
       <h2 class="uk-heading-divider">Projects</h2>
       <!-- <h3>Big projects</h3> -->
-      <div uk-grid class="uk-child-width-1-4 uk-text-center">
+      <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center">
         <div v-for="project in bigProjects" :key="project.key">
-          <div uk-lightbox>
-              <a class="uk-button" v-bind:href="'/projects/' + project.key" data-type="iframe">{{project.key}}</a>
+          <div uk-lightbox uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+            <div class="uk-inline uk-animation-toggle">
+              <a class="uk-visible-toggle" v-bind:href="'/projects/' + project.key" data-type="iframe">
+                <img v-bind:src="project.img_url" alt="">
+                <div class="uk-light uk-overlay uk-overlay-primary uk-position-center uk-hidden-hover uk-animation-fade uk-animation-fast">
+                    <p class="uk-animation-slide-bottom-small">{{project.title}}</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>

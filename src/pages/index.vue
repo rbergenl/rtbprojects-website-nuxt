@@ -3,7 +3,7 @@
     <Usps />
     <Certificates />
     <Projects />
-    <Skillmatrix />
+    <!-- <Skillmatrix /> -->
     <Contact />
   </main>
 </template>

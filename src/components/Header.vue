@@ -12,7 +12,7 @@
               <ul class="uk-navbar-nav">
                   <li><a href="#certificates" uk-scroll>Certificates</a></li>
                   <li><a href="#projects" uk-scroll>Projects</a></li>
-                  <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li>
+                  <!-- <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li> -->
                   <li><a href="#contact" uk-scroll>Contact</a></li>
               </ul>
           </div>
@@ -22,7 +22,7 @@
                   <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
                     <li><a href="#certificates" uk-scroll>Certificates</a></li>
                     <li><a href="#projects" uk-scroll>Projects</a></li>
-                    <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li>
+                    <!-- <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li> -->
                     <li><a href="#contact" uk-scroll>Contact</a></li>
                   </ul>
               </div>

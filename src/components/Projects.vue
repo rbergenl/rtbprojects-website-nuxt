@@ -5,9 +5,10 @@
       <!-- <h3>Big projects</h3> -->
       <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center">
         <div v-for="project in bigProjects" :key="project.key">
-          <div uk-lightbox uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
+
+          <div uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
             <div class="uk-inline uk-animation-toggle">
-              <a class="uk-visible-toggle" v-bind:href="'/projects/' + project.key" data-type="iframe">
+              <a uk-toggle class="uk-visible-toggle" :href="'#' + project.key" >
                 <img v-bind:src="project.img_url" alt="">
                 <div class="uk-light uk-overlay uk-overlay-primary uk-position-center uk-hidden-hover uk-animation-fade uk-animation-fast">
                     <p class="uk-animation-slide-bottom-small">{{project.title}}</p>
@@ -15,26 +16,30 @@
               </a>
             </div>
           </div>
+
+          <div :id="project.key" uk-modal>
+            <div class="uk-modal-dialog">
+
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+
+                <div class="uk-modal-header">
+                  <h2 class="uk-modal-title" v-if="project.company">{{project.company}}</h2>
+                </div>
+
+                <div class="uk-modal-body" uk-overflow-auto>
+                  <ul class="uk-list checkmarks" v-html="project.checkmarks"></ul>
+                  <blockquote cite="#" v-if="project.paragraphs" v-for="paragraph in project.paragraphs">
+                      <p class="uk-margin-small-bottom" v-html="paragraph.text"></p>
+                      <footer v-html="paragraph.footer"></footer>
+                  </blockquote>
+                  <div class="uk-text-center uk-margin-top">[end]</div>
+                </div>
+
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <!-- <h3>Small projects</h3>
-      <div uk-grid class="uk-child-width-1-4 uk-text-center">
-        <div v-for="project in smallProjects" :key="project.key">
-          <div uk-lightbox>
-              <a class="uk-button" v-bind:href="'/projects/' + project.key" data-type="iframe">{{project.key}}</a>
-          </div>
-        </div>
-      </div>
-
-      <h3>Own projects</h3>
-      <div uk-grid class="uk-child-width-1-4 uk-text-center">
-        <div v-for="project in ownProjects" :key="project.key">
-          <div uk-lightbox>
-              <a class="uk-button" v-bind:href="'/projects/' + project.key" data-type="iframe">{{project.key}}</a>
-          </div>
-        </div>
-      </div> -->
 
     </div>
   </section>
@@ -47,16 +52,23 @@ export default {
   computed: {
     ...mapGetters(['ownProjects', 'bigProjects', 'smallProjects'])
   },
-  // methods: {
-  //   getProjects(type) {
-  //     const projects = this.$store.state.projects;
-  //     let arr = new Array();
-  //     for (let key in projects) {
-  //       projects[key].key = key;
-  //       if (projects[key].type === type) arr.push(projects[key]);
-  //     }
-  //     return arr;
-  //   }
-  // }
+  mounted: () => {
+    if (process.client) {
+      // add checkmark icons to the list items
+      const iconElm = document.createElement('span');
+      iconElm.setAttribute('uk-icon', 'icon: check; ratio: 1');
+      iconElm.classList.add('uk-margin-small-right');
+      const listItems = document.querySelectorAll('#projects .checkmarks > li');
+      for (let listItem of listItems) {
+        listItem.insertBefore(iconElm.cloneNode(true), listItem.childNodes[0]);
+      }
+    }
+  }
 }
 </script>
+
+<style scoped>
+p {
+  font-style: normal
+}
+</style>

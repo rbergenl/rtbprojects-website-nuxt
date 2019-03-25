@@ -8,6 +8,10 @@
     ],
     "rewrites": [
       {
+        "source": "/media",
+        "destination": "/media"
+      },
+      {
         "source": "**",
         "function": "ssr"
       }

@@ -129,19 +129,19 @@ export const state = () => {
             footer: 'CryptoBot'
           },
           three: {
-            text: '',
+            text: 'Vivanty is a platform for travels to book nearby activities. RTB Projects took part of the team to help improve the concept, business plans and technical realisation of the platform.',
             footer: 'Vivanty'
           },
           four: {
-            text: '',
+            text: 'BelastingRetour is a tool powered by EastHorizon to help people make use of tax benefits. RTB Projects took part of the team to help with the technical realisation and marketing efforts, like SEO and Advertising. The tool is custom built with PHP and generates interactive PDFs.',
             footer: 'BelastingRetour'
           },
           five: {
-            text: '',
+            text: 'DutchAdventure is an adventure activities agency for expats to discover The Netherlands. RTB Projects took part of the team to co-create the concept and business plans and help with the realisation of the website and marketing efforts.',
             footer: 'DutchAdventure'
           },
           six: {
-            text: 'FinestPashmina is a webshop to sell pashmina shawls from Nepal. RTB Projects built a complete e-commerce solution to sell pashina shawls via internet. Woocommerce did not exist yet, so built the backend with PHP to manage content, inventory and orders. Also had custom integrations with payment gateways. And worked together with an Offshore supplier to perform Search Engine Optimization.',
+            text: 'FinestPashmina is a webshop to sell pashmina shawls from Nepal. RTB Projects took part of the team to co-create the business plans and provide the technical realisation. Since WooCommerce did not exist yet, a complete custom e-commerce solution was built to sell products via internet. This includes frontend and a PHP backend for inventory, order and payment processing. And worked together with an Offshore supplier to perform Search Engine Optimization.',
             footer: 'FinestPashmina'
           },
           seven: {
@@ -149,7 +149,7 @@ export const state = () => {
             footer: 'RealHookah'
           },
           eight: {
-            text: 'GlimpseMaps is a website that lays an interactive tourist map on top of Google Maps. My first venture inspired by The Four Hour Workweek. RTB Projects developed business plans and Outsourced the design of the web application to a freelancer in The Netherlands. Then outsourced the development of the web application to a company in India.',
+            text: 'GlimpseMaps is a website that lays an interactive tourist map on top of Google Maps. RTB Projects developed business plans and Outsourced the design of the web application to a freelancer in The Netherlands. Then outsourced the development of the web application to a company in India.',
             footer: 'GlimpseMaps'
           },
           nine: {
@@ -171,7 +171,7 @@ export const state = () => {
             footer: 'Projet Manager'
           },
           two: {
-            text: 'As Information Analyst delivered thirteen reports with process- and system descriptions and advisory reports.',
+            text: 'As Information Analyst delivered thirteen reports with process- and system descriptions and advisory reports. The activities included having interviews with stakeholders, creating system- and process diagrams and writing the reports.',
             footer: 'Information Analyst'
           }
         },

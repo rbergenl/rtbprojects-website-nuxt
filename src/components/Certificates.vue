@@ -13,7 +13,6 @@
                         </div>
                         <div class="uk-card-body">
                             <h3 class="uk-card-title">{{cert.title}}</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
                         </div>
                     </div>
                   </li>

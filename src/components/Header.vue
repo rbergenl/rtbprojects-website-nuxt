@@ -13,6 +13,7 @@
                   <li><a href="#certificates" uk-scroll>Certificates</a></li>
                   <li><a href="#projects" uk-scroll>Projects</a></li>
                   <!-- <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li> -->
+                  <!-- <li><a href="#testimonials" uk-scroll>Testimonials</a></li> -->
                   <li><a href="#contact" uk-scroll>Contact</a></li>
               </ul>
           </div>

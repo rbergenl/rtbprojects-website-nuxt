@@ -4,8 +4,8 @@
     <h2 v-if="project.company">{{project.company}}</h2>
     <ul class="uk-list checkmarks" v-html="project.checkmarks"></ul>
     <blockquote cite="#" v-if="project.paragraphs" v-for="paragraph in project.paragraphs">
-        <p class="uk-margin-small-bottom">{{paragraph.text}}</p>
-        <footer>{{paragraph.footer}}</footer>
+        <p class="uk-margin-small-bottom" v-html="paragraph.text"></p>
+        <footer v-html="paragraph.footer"></footer>
     </blockquote>
   </div>
   <div class="uk-container uk-container-center uk-text-center uk-margin-top">[end]</div>

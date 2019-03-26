@@ -1,9 +1,11 @@
 <template>
-  <div class="wrapper">
-    <Header />
-    <nuxt/>
-    <Footer />
-  </div>
+  <no-ssr>
+    <div class="wrapper">
+      <Header />
+      <nuxt />
+      <Footer />
+    </div>
+  </no-ssr>
 </template>
 
 <script>

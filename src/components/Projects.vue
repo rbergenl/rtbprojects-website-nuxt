@@ -4,7 +4,7 @@
       <h2 class="uk-heading-divider">Projects</h2>
       <!-- <h3>Big projects</h3> -->
       <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center">
-        <div v-for="project in bigProjects" :key="project.key">
+        <div v-for="project in projects" :key="project.key">
 
           <div uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
             <div class="uk-inline uk-animation-toggle">
@@ -50,7 +50,7 @@ import { mapGetters } from 'vuex';
 
 export default {
   computed: {
-    ...mapGetters(['ownProjects', 'bigProjects', 'smallProjects'])
+    ...mapGetters(['projects'])
   },
   mounted: () => {
     if (process.client) {

@@ -12,6 +12,10 @@
         "destination": "/media"
       },
       {
+        "source": "/graphql",
+        "function": "graphql"
+      },
+      {
         "source": "**",
         "function": "ssr"
       }

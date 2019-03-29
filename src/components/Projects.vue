@@ -4,11 +4,11 @@
       <h2 class="uk-heading-divider">Projects</h2>
       <!-- <h3>Big projects</h3> -->
       <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center">
-        <div v-for="project in projects" :key="project.key">
+        <div v-for="project in projects" :key="project.id">
 
           <div uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">
             <div class="uk-inline uk-animation-toggle">
-              <a uk-toggle class="uk-visible-toggle" :href="'#' + project.key" >
+              <a uk-toggle class="uk-visible-toggle" :href="'#' + project.id" >
                 <img v-bind:src="project.img_url" alt="">
                 <div class="uk-light uk-overlay uk-overlay-primary uk-position-center uk-hidden-hover uk-animation-fade uk-animation-fast">
                     <p class="uk-animation-slide-bottom-small">{{project.title}}</p>
@@ -17,7 +17,7 @@
             </div>
           </div>
 
-          <div :id="project.key" uk-modal>
+          <div :id="project.id" uk-modal>
             <div class="uk-modal-dialog">
 
                 <button class="uk-modal-close-default" type="button" uk-close></button>

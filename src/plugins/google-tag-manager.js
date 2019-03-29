@@ -3,7 +3,7 @@ export default () => {
   /*
   ** Only run on client-side and only in production mode
   */
-  if (process.env.NODE_ENV !== 'production') return
+  if (process.env.NODE_ENV === 'development') return
   /*
   ** Include Google Analytics Script
   */

@@ -62,7 +62,7 @@ export const actions = {
           knowledge
           experience
         }
-        projects {
+        projects (orderBy: year_DESC) {
           id
           title
           type
@@ -78,7 +78,11 @@ export const actions = {
 
     }
     `
-    fetch('http://localhost:4000/graphql', {
+    let base = '';
+    if (process.env.NODE_ENV === 'development') {
+      base = 'http://localhost:4000';
+    }
+    fetch(base + '/graphql', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ query: query }),

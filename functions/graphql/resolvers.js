@@ -6,6 +6,17 @@ var mockCertificates = require('./mocks/certificates');
 var mockSkills = require('./mocks/skills');
 var mockProjects = require('./mocks/projects');
 
+var orderBy = (arr, args) => {
+  const { orderBy } = args;
+  const field = orderBy.split('_')[0];
+  const direction = orderBy.split('_')[1];
+  let sortOrder = (direction == 'ASC') ? 1 : -1;
+  return function (a,b) {
+      var result = (a[field] < b[field]) ? -1 : (a[field] > b[field]) ? 1 : 0;
+      return result * sortOrder;
+  }
+}
+
 var getUsps = new Promise((resolve, reject) => {
   db.collection('usps').get()
     .then((querySnapshot) => {
@@ -37,34 +48,39 @@ var getCertificates = new Promise((resolve, reject) => {
 });
 
 var getSkills = new Promise((resolve, reject) => {
-  db.collection('skills').get()
-    .then((querySnapshot) => {
-      var data = querySnapshot.docs.map(function (documentSnapshot) {
-        return documentSnapshot.data();
-      });
-      if (data.length === 0) throw Error('could not find skills')
-      resolve(data);
-    })
-    .catch((err) => {
-      console.log(err)
+  // db.collection('skills').get()
+  //   .then((querySnapshot) => {
+  //     var data = querySnapshot.docs.map(function (documentSnapshot) {
+  //       return documentSnapshot.data();
+  //     });
+  //     if (data.length === 0) throw Error('could not find skills')
+  //     resolve(data);
+  //   })
+  //   .catch((err) => {
+  //     console.log(err)
       resolve(mockSkills)
-    });
+    // });
 });
 
-var getProjects = new Promise((resolve, reject) => {
-  db.collection('projects').get()
-    .then((querySnapshot) => {
-      var data = querySnapshot.docs.map(function (documentSnapshot) {
-        return documentSnapshot.data();
-      });
-      if (data.length === 0) throw Error('could not find projects')
-      resolve(data);
-    })
-    .catch((err) => {
-      console.log(err)
-      resolve(mockProjects)
+var getProjects = (args) => {
+  return new Promise((resolve, reject) => {
+    db.collection('projects').get()
+      .then((querySnapshot) => {
+        var data = querySnapshot.docs.map(function (documentSnapshot) {
+          return documentSnapshot.data();
+        });
+        if (data.length === 0) throw Error('could not find projects')
+        if (args.orderBy) {
+          data.sort(orderBy(data, args));
+        }
+        resolve(data);
+      })
+      .catch((err) => {
+        console.log(err)
+        resolve(mockProjects)
     });
-});
+  });
+}
 
 // The root provides a resolver function for each API endpoint
 var resolvers = {

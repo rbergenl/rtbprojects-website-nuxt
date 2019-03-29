@@ -44,15 +44,15 @@ export default {
   */
   plugins: [
   //  { src: '~/plugins/ng', ssr: false }
+    { src: '~/plugins/google-tag-manager', ssr: false }
   ],
 
   /*
   ** Nuxt.js modules
   */
   modules: [
-    ['@nuxtjs/pwa', { icon: false }]
+    ['@nuxtjs/pwa']
   ],
-
   /*
   ** Build configuration
   */

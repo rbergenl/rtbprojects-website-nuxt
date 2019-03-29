@@ -23,6 +23,10 @@ button {
    font-size: 1.5rem;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 a {
   text-decoration: underline;
 }

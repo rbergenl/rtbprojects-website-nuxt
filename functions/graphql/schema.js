@@ -2,6 +2,10 @@ var { buildSchema } = require('graphql');
 
 // Construct a schema, using GraphQL schema language
 var schema = buildSchema(`
+  enum ProjectOrderByInput {
+    year_ASC
+    year_DESC
+  }
   type Usp {
     text: String
     title: String
@@ -41,7 +45,7 @@ var schema = buildSchema(`
     usps: [Usp]
     certificates: [Certificate]
     skills: [Skill]
-    projects: [Project]
+    projects (orderBy: ProjectOrderByInput): [Project]
     getHomepage: Page
   }
 `);

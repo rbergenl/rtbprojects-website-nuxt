@@ -19,15 +19,7 @@ module.exports = [{
     img_url: 'https://ituonline.com/wp-content/uploads/2018/02/prince2-small.png'
   },
   {
-    title: '',
-    img_url: ''
-  },
-  {
-    title: '',
-    img_url: ''
-  },
-  {
-    title: '',
+    title: 'ITIL',
     img_url: ''
   }
 ]

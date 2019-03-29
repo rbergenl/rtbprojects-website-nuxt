@@ -46,7 +46,7 @@ export const actions = {
   loadHomepage (context) {
     const query = `
     {
-      getHomepage {
+
         usps {
           text
           title
@@ -75,7 +75,7 @@ export const actions = {
             footer
           }
         }
-      }
+
     }
     `
     fetch('http://localhost:4000/graphql', {
@@ -85,10 +85,10 @@ export const actions = {
     })
     .then(res => res.json())
     .then(res => {
-      context.commit('SET_USPS', res.data.getHomepage.usps)
-      context.commit('SET_CERTIFICATES', res.data.getHomepage.certificates)
-      context.commit('SET_SKILLS', res.data.getHomepage.skills)
-      context.commit('SET_PROJECTS', res.data.getHomepage.projects)
+      context.commit('SET_USPS', res.data.usps)
+      context.commit('SET_CERTIFICATES', res.data.certificates)
+      context.commit('SET_SKILLS', res.data.skills)
+      context.commit('SET_PROJECTS', res.data.projects)
       return res;
     })
     //.then(res => console.log(res))

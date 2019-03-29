@@ -68,6 +68,10 @@ var getProjects = new Promise((resolve, reject) => {
 
 // The root provides a resolver function for each API endpoint
 var resolvers = {
+  usps: getUsps,
+  certificates: getCertificates,
+  skills: getSkills,
+  projects: getProjects,
   getHomepage: () => Promise.all([
     getUsps,
     getCertificates,

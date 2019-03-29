@@ -105,7 +105,7 @@ module.exports = [{
   img_url: '/media/projects/wageningen_university_and_research_project_logo.png',
   paragraphs: [{
       text: 'As Project Manager responsible for two projects. One Prince2 project to deliver an IT Selfservice Portal. And a Scrum project to deliver a workflow application for an internal customer. The activities included making project plans, supporting the teams and communicating with stakeholders.',
-      footer: 'Projet Manager'
+      footer: 'Project Manager'
     },
     {
       text: 'As Information Analyst delivered thirteen reports with process- and system descriptions and advisory reports. The activities included having interviews with stakeholders, creating system- and process diagrams and writing the reports.',

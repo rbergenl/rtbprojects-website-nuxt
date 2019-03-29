@@ -38,6 +38,10 @@ var schema = buildSchema(`
     projects: [Project]
   }
   type Query {
+    usps: [Usp]
+    certificates: [Certificate]
+    skills: [Skill]
+    projects: [Project]
     getHomepage: Page
   }
 `);

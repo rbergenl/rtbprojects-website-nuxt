@@ -1,6 +1,3 @@
-import { db } from '~/plugins/firebase';
-
-
 export const SET_USPS = 'SET_USPS';
 export const SET_CERTIFICATES = 'SET_CERTIFICATES';
 export const SET_SKILLS = 'SET_SKILLS';
@@ -27,13 +24,6 @@ export const getters = {
   },
   projects (state) {
     return state.projects
-    // const projects = state.projects;
-    // let arr = new Array();
-    // for (let project in projects) {
-    //   projects[key].key = key;
-    //   arr.push(projects[key]);
-    // }
-    // return arr;
   }
 }
 
@@ -53,7 +43,7 @@ export const mutations = {
 }
 
 export const actions = {
-  loadCertificates (context) {
+  loadHomepage (context) {
     const query = `
     {
       getHomepage {
@@ -101,7 +91,7 @@ export const actions = {
       context.commit('SET_PROJECTS', res.data.getHomepage.projects)
       return res;
     })
-    .then(res => console.log(res))
+    //.then(res => console.log(res))
     .catch(err => console.log(err));
   }
 }

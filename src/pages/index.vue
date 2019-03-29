@@ -24,6 +24,10 @@ export default {
     Projects,
     Skillmatrix,
     Contact
+  },
+  created() {
+    // fire the action to do the firebase call; and from in that action the mutation of state is commited.
+    this.$store.dispatch('loadHomepage');
   }
 }
 </script>

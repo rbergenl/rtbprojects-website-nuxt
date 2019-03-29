@@ -7,6 +7,9 @@ export default {
   ** Headers of the page
   */
   head: {
+    htmlAttrs: {
+      lang: 'en',
+    },
     title: 'RTB Projects',
     meta: [
       { charset: 'utf-8' },
@@ -47,6 +50,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
+    ['@nuxtjs/pwa', { icon: false }]
   ],
 
   /*

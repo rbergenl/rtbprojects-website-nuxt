@@ -31,10 +31,6 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  created() {
-    // fire the action to do the firebase call; and from in that action the mutation of state is commited.
-    this.$store.dispatch('loadCertificates');
-  },
   computed: {
     // get the actual state and as computed update here when state is updated after loading
     ...mapGetters(['certificates'])

@@ -21,17 +21,17 @@ export default {
   computed: {
     ...mapGetters(['usps'])
   },
-  mounted: () => {
-    if (process.client) {
-      // add checkmark icons to the list items
-      const iconElm = document.createElement('span');
-      iconElm.setAttribute('uk-icon', 'icon: check; ratio: 1');
-      iconElm.classList.add('uk-margin-small-right');
-      const listItems = document.querySelectorAll('#usps li');
-      for (let listItem of listItems) {
-        listItem.insertBefore(iconElm.cloneNode(true), listItem.childNodes[0]);
+  updated() {
+      if (process.client) {
+        // add checkmark icons to the list items
+        const iconElm = document.createElement('span');
+        iconElm.setAttribute('uk-icon', 'icon: check; ratio: 1');
+        iconElm.classList.add('uk-margin-small-right');
+        const listItems = document.querySelectorAll('#usps li');
+        for (let listItem of listItems) {
+          listItem.insertBefore(iconElm.cloneNode(true), listItem.childNodes[0]);
+        }
       }
-    }
   }
 }
 </script>

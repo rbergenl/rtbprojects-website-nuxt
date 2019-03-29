@@ -3,7 +3,7 @@
     <div class="uk-container uk-container-small uk-text-center">
       <ul>
         <li>
-          <a href="https://linkedin.com/in/robintenberge" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="linkedin"></a>
+          <a href="https://linkedin.com/in/robintenberge" rel="noopener" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="linkedin"></a>
         </li>
         <!-- <li>
           <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>

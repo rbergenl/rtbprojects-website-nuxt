@@ -52,7 +52,7 @@ export default {
   computed: {
     ...mapGetters(['projects'])
   },
-  mounted: () => {
+  updated() {
     if (process.client) {
       // add checkmark icons to the list items
       const iconElm = document.createElement('span');
@@ -70,5 +70,9 @@ export default {
 <style scoped>
 p {
   font-style: normal
+}
+.uk-icon:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+  stroke: green;
+  stroke-width: 2;
 }
 </style>

@@ -5,6 +5,7 @@ var mockUsps = require('./mocks/usps');
 var mockCertificates = require('./mocks/certificates');
 var mockSkills = require('./mocks/skills');
 var mockProjects = require('./mocks/projects');
+var mockTestimonials = require('./mocks/testimonials');
 
 var orderBy = (arr, args) => {
   const { orderBy } = args;
@@ -82,23 +83,46 @@ var getProjects = (args) => {
   });
 }
 
+var getTestimonials = (args) => {
+  return new Promise((resolve, reject) => {
+    db.collection('testimonials').get()
+      .then((querySnapshot) => {
+        var data = querySnapshot.docs.map(function (documentSnapshot) {
+          return documentSnapshot.data();
+        });
+        if (data.length === 0) throw Error('could not find testimonials')
+        if (args.orderBy) {
+          data.sort(orderBy(data, args));
+        }
+        resolve(data);
+      })
+      .catch((err) => {
+        console.log(err)
+        resolve(mockTestimonials)
+      });
+  });
+}
+
 // The root provides a resolver function for each API endpoint
 var resolvers = {
   usps: getUsps,
   certificates: getCertificates,
   skills: getSkills,
   projects: getProjects,
+  testimonials: getTestimonials,
   getHomepage: () => Promise.all([
     getUsps,
     getCertificates,
     getSkills,
-    getProjects])
+    getProjects,
+    getTestimonials])
   .then((values) => {
     return {
       usps: values[0],
       certificates: values[1],
       skills: values[2],
-      projects: values[3]
+      projects: values[3],
+      testimonials: values[4]
     }
   })
   .catch((err) => console.log(err))

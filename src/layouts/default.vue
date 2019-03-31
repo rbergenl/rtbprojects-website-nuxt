@@ -1,6 +1,8 @@
 <template>
   <div>
-    <noscript>Please enable Javascript to view this website</noscript>
+    <noscript>
+      Please enable Javascript to view this website
+    </noscript>
     <no-ssr>
       <div class="wrapper">
         <Header />
@@ -8,6 +10,9 @@
         <Footer />
       </div>
     </no-ssr>
+    <script>
+
+    </script>
   </div>
 </template>
 

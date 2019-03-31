@@ -10,10 +10,10 @@
           </div>
           <div class="uk-navbar-right uk-visible@m">
               <ul class="uk-navbar-nav">
-                  <li><a href="#certificates" uk-scroll>Certificates</a></li>
                   <li><a href="#projects" uk-scroll>Projects</a></li>
                   <!-- <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li> -->
-                  <!-- <li><a href="#testimonials" uk-scroll>Testimonials</a></li> -->
+                  <li><a href="#testimonials" uk-scroll>Testimonials</a></li>
+                  <li><a href="#certificates" uk-scroll>Certificates</a></li>
                   <li><a href="#contact" uk-scroll>Contact</a></li>
               </ul>
           </div>
@@ -21,9 +21,10 @@
               <div class="uk-offcanvas-bar uk-flex uk-flex-column">
                 <button class="uk-offcanvas-close" type="button" uk-close></button>
                   <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
-                    <li><a href="#certificates" uk-scroll>Certificates</a></li>
                     <li><a href="#projects" uk-scroll>Projects</a></li>
                     <!-- <li><a href="#skillmatrix" uk-scroll>Skillmatrix</a></li> -->
+                    <li><a href="#testimonials" uk-scroll>Testimonials</a></li>
+                    <li><a href="#certificates" uk-scroll>Certificates</a></li>
                     <li><a href="#contact" uk-scroll>Contact</a></li>
                   </ul>
               </div>

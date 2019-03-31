@@ -18,8 +18,8 @@
                   </li>
               </ul>
             </div>
-            <a class="uk-position-center-left uk-position-small" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
-            <a class="uk-position-center-right uk-position-small" href="#" uk-slidenav-next uk-slider-item="next"></a>
+            <a class="uk-position-center-left uk-position-small" href="#" rel="noopener nofollow" uk-slidenav-previous uk-slider-item="previous"><span style="display:none">previous</span></a>
+            <a class="uk-position-center-right uk-position-small" href="#" rel="noopener nofollow" uk-slidenav-next uk-slider-item="next"><span style="display:none">next</span></a>
         </div>
         <ul class="uk-slider-nav uk-dotnav uk-flex-center uk-margin"></ul>
       </div>

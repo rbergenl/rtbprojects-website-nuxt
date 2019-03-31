@@ -90,7 +90,7 @@ module.exports = [{
       footer: 'GlimpseMaps'
     },
     {
-      text: 'Three friends, Robin, Sjoerd and Ivo, went on an adventurious trip. Hitchhiking and couchsurfing to Asia. The endgoal is to reach Nepal and do volunteering work. RTB Projects built a complete blog solution to share the story online. Wordpress did not exist yet, so built the backend with PHP to manage the blog posts and pages.',
+      text: 'HitchhikeToAsia is an adventurious hitchhike and couchsurfing trip by three friends. The endgoal is to reach Nepal and do volunteering work. RTB Projects built a complete blog solution to share the story online. Wordpress did not exist yet, so built the backend with PHP to manage the blog posts and pages.',
       footer: 'HitchhikeToAsia'
     }
   ],

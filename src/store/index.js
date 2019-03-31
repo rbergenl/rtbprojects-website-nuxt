@@ -2,13 +2,15 @@ export const SET_USPS = 'SET_USPS';
 export const SET_CERTIFICATES = 'SET_CERTIFICATES';
 export const SET_SKILLS = 'SET_SKILLS';
 export const SET_PROJECTS = 'SET_PROJECTS';
+export const SET_TESTIMONIALS = 'SET_TESTIMONIALS';
 
 export const state = () => {
   return {
     usps: [],
     certificates: [],
     skills: [],
-    projects: []
+    projects: [],
+    testimonials: []
   }
 }
 
@@ -24,6 +26,9 @@ export const getters = {
   },
   projects (state) {
     return state.projects
+  },
+  testimonials (state) {
+    return state.testimonials
   }
 }
 
@@ -39,6 +44,9 @@ export const mutations = {
   },
   [SET_PROJECTS] (state, payload) {
     state.projects = payload;
+  },
+  [SET_TESTIMONIALS] (state, payload) {
+    state.testimonials = payload;
   }
 }
 
@@ -75,7 +83,10 @@ export const actions = {
             footer
           }
         }
-
+        testimonials (orderBy: order_ASC) {
+          text
+          name
+        }
     }
     `
     let base = '';
@@ -93,6 +104,7 @@ export const actions = {
       context.commit('SET_CERTIFICATES', res.data.certificates)
       context.commit('SET_SKILLS', res.data.skills)
       context.commit('SET_PROJECTS', res.data.projects)
+      context.commit('SET_TESTIMONIALS', res.data.testimonials)
       return res;
     })
     //.then(res => console.log(res))

@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="uk-section uk-section-muted uk-dark">
+  <section id="contact" class="uk-section background-primary uk-light">
     <div class="uk-container uk-text-center">
       <button onclick="this.style.display='none';document.querySelector('span.contact').style.display='block'">Contact</button><span class="contact"><a href="mailto:robin@rtbprojects.com">robin@rtbprojects.com</a></span>
     </div>
@@ -25,6 +25,7 @@ button {
 
 button:hover {
   cursor: pointer;
+  background-color: #576980;
 }
 
 a {

@@ -17,13 +17,14 @@ export default {
       { hid: 'description', name: 'description', content: '10 years of experience with Cloud, Frontend and Backend web technology.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/png', href: 'icons/favicon.png' },
-      { rel: 'stylesheet', type:'text/css', href: 'https://fonts.googleapis.com/css?family=Dosis', crossorigin: true },
-      { rel: 'stylesheet', type:'text/css', href:'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css' }
+      { rel: 'icon', type: 'image/png', href: 'icon.png' },
+      { rel: 'prefetch stylesheet', type:'text/css', href: 'https://fonts.googleapis.com/css?family=Dosis', crossorigin: true },
+      { rel: 'preconnect', href: 'https://firebasestorage.googleapis.com', crossorigin: true },
+      { rel: 'preload', href: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css', as: 'style', onload: 'this.onload=null;this.rel="stylesheet"' }
     ],
     script: [
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js' },
-      { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js' }
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js', defer: true },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js', defer: true }
     ]
   },
 

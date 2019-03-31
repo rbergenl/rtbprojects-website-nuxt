@@ -6,6 +6,10 @@ var schema = buildSchema(`
     year_ASC
     year_DESC
   }
+  enum TestimonialOrderByInput {
+    order_ASC
+    order_DESC
+  }
   type Usp {
     text: String
     title: String
@@ -35,6 +39,11 @@ var schema = buildSchema(`
     text: String
     footer: String
   }
+  type Testimonial {
+    text: String
+    name: String
+    order: Int
+  }
   type Page {
     usps: [Usp]
     certificates: [Certificate]
@@ -46,6 +55,7 @@ var schema = buildSchema(`
     certificates: [Certificate]
     skills: [Skill]
     projects (orderBy: ProjectOrderByInput): [Project]
+    testimonials (orderBy: TestimonialOrderByInput): [Testimonial]
     getHomepage: Page
   }
 `);

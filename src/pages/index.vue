@@ -1,10 +1,10 @@
 <template>
   <main class="home">
     <Usps />
-    <Certificates />
     <Projects />
     <!-- <Skillmatrix /> -->
-    <!-- <Testimonials /> -->
+    <Testimonials />
+    <Certificates />
     <Contact />
   </main>
 </template>
@@ -23,6 +23,7 @@ export default {
     Certificates,
     Projects,
     Skillmatrix,
+    Testimonials,
     Contact
   },
   created() {

@@ -3,13 +3,13 @@
     <noscript>
       Please enable Javascript to view this website
     </noscript>
-    <no-ssr>
+    <!-- <no-ssr> -->
       <div class="wrapper">
         <Header />
         <nuxt />
         <Footer />
       </div>
-    </no-ssr>
+    <!-- </no-ssr> -->
     <script>
 
     </script>

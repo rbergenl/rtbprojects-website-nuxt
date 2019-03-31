@@ -2,7 +2,9 @@
 
   <header class="background-primary uk-light" style="text-align:center">
 
-    <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 150">
+    <div id="sticky">
+    <!-- <div id="sticky" uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 150"> -->
+
       <nav class="uk-navbar-container background-primary" uk-navbar>
           <div class="uk-navbar-left">
             <img src="/media/profile-picture.jpeg" alt="profile picture" />
@@ -37,6 +39,7 @@
           </div>
 
       </nav>
+
     </div>
 
     <div class="uk-container uk-margin-top">
@@ -49,6 +52,18 @@
 
 <script>
 export default {
+  mounted() {
+    // to prevent ssr/csr inconsistencies; render the sticky header when the header is mounted
+    const element = document.querySelector('#sticky');
+    const options = {
+      animation: 'uk-animation-slide-top',
+      selTarget: '.uk-navbar-container',
+      clsActive: 'uk-navbar-sticky',
+      clsInactive: 'uk-navbar-transparent',
+      top: 150
+    }
+    UIkit.sticky(element, options);
+  }
 }
 </script>
 

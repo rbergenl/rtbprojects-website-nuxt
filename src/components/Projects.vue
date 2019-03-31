@@ -3,7 +3,7 @@
     <div class="uk-container uk-text-center">
       <h2 class="uk-heading-divider">Projects</h2>
       <!-- <h3>Big projects</h3> -->
-      <div uk-grid class="uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center">
+      <div class="uk-grid uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center">
         <div v-for="project in projects" :key="project.id">
 
           <div uk-scrollspy="cls: uk-animation-slide-bottom-medium; repeat: true">

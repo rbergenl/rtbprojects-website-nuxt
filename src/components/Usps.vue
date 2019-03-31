@@ -1,7 +1,7 @@
 <template>
   <section id="usps" class="uk-section uk-section-muted">
     <div class="uk-container uk-text-center">
-      <div uk-grid class="uk-child-width-expand@s uk-text-center">
+      <div class="uk-grid uk-child-width-1-3@m uk-text-center">
         <div v-for="usp in usps" class="uk-animation-toggle">
           <div class="usp-icon uk-box-shadow-small uk-border-circle uk-animation-scale-up">
             <span v-bind:uk-icon="'icon: ' + usp.icon + '; ratio: 4'"></span>

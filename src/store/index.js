@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export const SET_USPS = 'SET_USPS';
 export const SET_CERTIFICATES = 'SET_CERTIFICATES';
 export const SET_SKILLS = 'SET_SKILLS';
@@ -93,12 +95,20 @@ export const actions = {
     if (process.env.NODE_ENV === 'development') {
       base = 'http://localhost:4000';
     }
-    fetch(base + '/graphql', {
+    axios({
+      url: base + '/graphql',
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ query: query }),
+      responseType: 'json',
+      data: JSON.stringify({ query: query }),
     })
-    .then(res => res.json())
+    .then(res => res.data)
+    // fetch(base + '/graphql', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({ query: query }),
+    // })
+    //.then(res => res.json())
     .then(res => {
       context.commit('SET_USPS', res.data.usps)
       context.commit('SET_CERTIFICATES', res.data.certificates)

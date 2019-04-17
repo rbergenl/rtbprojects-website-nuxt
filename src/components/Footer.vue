@@ -5,6 +5,9 @@
         <li>
           <a href="https://linkedin.com/in/robintenberge" rel="noopener" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="linkedin" aria-label="linkedin"></a>
         </li>
+        <li>
+          <a href="https://github.com/rbergenl" rel="noopener" target="_blank" class="uk-icon-button uk-margin-small-right" uk-icon="github" aria-label="github"></a>
+        </li>
         <!-- <li>
           <a href="" class="uk-icon-button uk-margin-small-right" uk-icon="twitter"></a>
         </li>

@@ -1,4 +1,3 @@
-# Why SSR?
 Its for SEO. A search bot will come to your page example.com/ and reads the `<title>` and `<meta>` tags.
 With a SPA and using a router to display different content at different urls; still, the search bot
 will come to the "single page".
